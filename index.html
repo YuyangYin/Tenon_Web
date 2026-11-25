@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Tenon plans, generates, and assembles navigable 3D worlds from text briefs.">
+  <title>Tenon · Planning, Generating, and Assembling Composable 3D Worlds</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="wordmark" href="#top" aria-label="Tenon home"><span class="mark" aria-hidden="true"></span>Tenon</a>
+      <nav aria-label="Project sections">
+        <a href="#demos">Demos</a>
+        <a href="#method">Method</a>
+        <a href="#comparisons">Comparisons</a>
+      </nav>
+      <a class="status" href="#release"><span class="status-dot" aria-hidden="true"></span>Under review</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="project-title">
+      <div class="shell hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Planning, generating, and assembling</p>
+          <h1 id="project-title">Composable<br><em>3D worlds</em></h1>
+          <p class="intro">Tenon turns a text brief into a world you can walk through. It plans a 3D layout, generates detailed scenes, and connects rooms and outdoor spaces as interchangeable modules.</p>
+          <a class="button" href="#demos"><span class="play-icon" aria-hidden="true"></span>Watch demos</a>
+          <p class="release" id="release">The paper and code are under review and will be released as soon as possible.</p>
+        </div>
+        <figure class="hero-visual">
+          <img src="assets/images/winter-world.webp" alt="Snow-covered apartment blocks beside the glowing entrance to an underground bunker" width="1600" height="900" fetchpriority="high">
+          <figcaption>Winter bunker <span aria-hidden="true">/</span> Generated scene</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="shell section" aria-labelledby="teaser-title">
+      <div class="section-heading">
+        <h2 id="teaser-title">From blockout to world</h2>
+        <p>The same layout can connect multiple floors, take on new rooms, and be restyled.</p>
+      </div>
+      <a class="figure-link" href="assets/images/teaser.webp" aria-label="Open the full-size Tenon teaser" target="_blank" rel="noopener">
+        <img src="assets/images/teaser.webp" alt="Tenon teaser showing a planned outdoor layout and underground bunker assembled with multiple floors, optional rooms, and varied visual styles" width="2700" height="1274" loading="lazy" decoding="async">
+      </a>
+    </section>
+
+    <section class="shell section" id="demos" aria-labelledby="demos-title">
+      <div class="section-heading">
+        <h2 id="demos-title">World demos</h2>
+      </div>
+      <div class="demo-grid">
+        <article class="demo">
+          <video controls playsinline preload="none" poster="assets/images/winter-bunker-poster.webp" width="1920" height="1080" aria-labelledby="winter-title">
+            <source src="assets/videos/winter-bunker.mp4" type="video/mp4">
+            <a href="assets/videos/winter-bunker.mp4">Download the winter bunker demo</a>
+          </video>
+          <div class="demo-copy">
+            <h3 id="winter-title">Winter bunker</h3>
+            <p>Walk from a snowy exterior into a two-level bunker.</p>
+          </div>
+        </article>
+        <article class="demo">
+          <video controls playsinline preload="none" poster="assets/images/six-room-interior-poster.webp" width="1920" height="1080" aria-labelledby="indoor-title">
+            <source src="assets/videos/six-room-interior.mp4" type="video/mp4">
+            <a href="assets/videos/six-room-interior.mp4">Download the six-room interior demo</a>
+          </video>
+          <div class="demo-copy">
+            <h3 id="indoor-title">Six-room interior</h3>
+            <p>Tour a six-room home, swap room modules, and see a robot navigate the layout.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="shell section" id="method" aria-labelledby="method-title">
+      <div class="section-heading">
+        <h2 id="method-title">How Tenon works</h2>
+        <p>An agent plans a shared 3D blockout. Tenon turns layout-guided panoramas into 3D Gaussian scenes, then joins them at shared doorways.</p>
+      </div>
+      <a class="figure-link" href="assets/images/method.webp" aria-label="Open the full-size method figure" target="_blank" rel="noopener">
+        <img src="assets/images/method.webp" alt="Tenon pipeline with three stages: agentic planning, blockout-conditioned panorama generation and reconstruction, and assembly with scene-layer rendering" width="2600" height="1365" loading="lazy" decoding="async">
+      </a>
+    </section>
+
+    <section class="shell section" id="comparisons" aria-labelledby="comparisons-title">
+      <div class="section-heading">
+        <h2 id="comparisons-title">Visual comparisons</h2>
+      </div>
+      <div class="comparison-list">
+        <figure class="comparison">
+          <figcaption>
+            <h3>Panorama generation</h3>
+            <p>Tenon better preserves the planned object placement and keeps the panorama continuous across the seam.</p>
+          </figcaption>
+          <a class="figure-link" href="assets/images/panorama-comparison.webp" aria-label="Open the full-size panorama comparison" target="_blank" rel="noopener">
+            <img src="assets/images/panorama-comparison.webp" alt="Two panorama comparisons with zoomed details showing object placement, floor geometry, and continuity at the panorama seam" width="2600" height="1616" loading="lazy" decoding="async">
+          </a>
+        </figure>
+        <figure class="comparison">
+          <figcaption>
+            <h3>3D scene generation</h3>
+            <p>In a six-room scene, Tenon follows the blockout while preserving detailed materials and geometry.</p>
+          </figcaption>
+          <a class="figure-link" href="assets/images/scene-comparison.webp" aria-label="Open the full-size 3D scene comparison" target="_blank" rel="noopener">
+            <img src="assets/images/scene-comparison.webp" alt="Overhead and eye-level views comparing Tenon and baselines against a six-room blockout" width="2700" height="799" loading="lazy" decoding="async">
+          </a>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <a class="wordmark" href="#top" aria-label="Tenon home"><span class="mark" aria-hidden="true"></span>Tenon</a>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+</body>
+</html>
