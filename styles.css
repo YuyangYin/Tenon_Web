@@ -93,23 +93,6 @@ a:focus-visible, video:focus-visible { outline: 2px solid var(--accent); outline
 
 .header-inner nav a:hover, .footer-inner > a:last-child:hover { color: var(--accent); }
 
-.status {
-  display: inline-flex;
-  align-items: center;
-  gap: .5rem;
-  padding: .4rem .75rem;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  color: var(--accent);
-  background: var(--accent-soft);
-  font-size: .875rem;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.status:hover { border-color: var(--accent); }
-.status-dot { width: .4rem; height: .4rem; border-radius: 50%; background: var(--accent); }
-
 .hero {
   position: relative;
   isolation: isolate;
@@ -144,23 +127,20 @@ h1 { font-size: clamp(2.15rem, 3.35vw, 3.25rem); line-height: 1.06; font-weight:
 .intro, .section-heading p, .demo p, .comparison p { color: var(--secondary); line-height: 1.65; }
 .intro { max-width: 31rem; margin-block: 1.35rem 1.5rem; font-size: clamp(1rem, 1.32vw, 1.125rem); }
 
-.button {
-  display: inline-flex;
-  align-items: center;
-  gap: .7rem;
-  padding: .85rem 1.15rem;
+.project-resources { display: flex; gap: .65rem; }
+
+.resource-button {
+  min-height: 2.75rem;
+  min-width: 5rem;
+  padding-inline: 1rem;
+  border: 1px solid #cbd8de;
   border-radius: 999px;
-  background: var(--accent);
-  color: white;
-  text-decoration: none;
-  font-size: .94rem;
-  font-weight: 700;
+  background: var(--panel);
+  color: var(--secondary);
+  font: 700 .94rem/1 Inter, system-ui, sans-serif;
 }
 
-.button:hover { background: #095c53; }
-.play-icon { border-block: .35rem solid transparent; border-left: .53rem solid currentColor; }
-.release { max-width: 26rem; margin-top: 1rem; color: var(--secondary); font-size: .875rem; line-height: 1.55; }
-.release:target { color: var(--accent); }
+.release { margin-top: .75rem; color: var(--secondary); font-size: .875rem; line-height: 1.55; }
 
 .hero-visual {
   position: absolute;
@@ -233,8 +213,8 @@ h3 { font-size: 1.55rem; line-height: 1.2; }
 @media (max-width: 600px) {
   html { scroll-padding-top: 6.75rem; }
   .shell { width: calc(100% - 2rem); }
-  .header-inner { display: grid; grid-template-columns: 1fr auto; min-height: unset; padding-block: .8rem .65rem; row-gap: .8rem; }
-  .header-inner nav { grid-row: 2; grid-column: 1 / -1; gap: 1.4rem; margin-left: 0; }
+  .header-inner { flex-wrap: wrap; min-height: unset; padding-block: .8rem .65rem; row-gap: .8rem; }
+  .header-inner nav { flex-basis: 100%; gap: 1.4rem; margin-left: 0; }
   .hero-inner { padding-block: 2.5rem; }
   h1 { font-size: clamp(1.95rem, 7vw, 2.65rem); }
   .hero-visual figcaption { inset: auto .55rem .55rem auto; }
